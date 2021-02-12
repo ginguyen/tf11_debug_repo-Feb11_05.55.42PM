@@ -1,0 +1,62 @@
+[
+  {
+    "assetName": "H1_M1_L1_OR",
+    "tags": "",
+    "templateType": "TF",
+    "templateVersion": "0.11",
+    "failureCriteriaHigh": "1",
+    "failureCriteriaMedium": "1",
+    "failureCriteriaLow": "1",
+    "failureCriteriaOperator": "OR"
+  },
+  {
+    "assetName": "H100_M100_L100_OR",
+    "tags": "",
+    "templateType": "TF",
+    "templateVersion": "0.11",
+    "failureCriteriaHigh": "100",
+    "failureCriteriaMedium": "100",
+    "failureCriteriaLow": "100",
+    "failureCriteriaOperator": "OR"
+  },
+  {
+    "assetName": "H1_M1_L1_AND",
+    "tags": "",
+    "templateType": "TF",
+    "templateVersion": "0.11",
+    "failureCriteriaHigh": "1",
+    "failureCriteriaMedium": "1",
+    "failureCriteriaLow": "1",
+    "failureCriteriaOperator": "AND"
+  },
+  {
+    "assetName": "H100_M100_L100_AND",
+    "tags": "",
+    "templateType": "TF",
+    "templateVersion": "0.11",
+    "failureCriteriaHigh": "10",
+    "failureCriteriaMedium": "10",
+    "failureCriteriaLow": "10",
+    "failureCriteriaOperator": "AND"
+  },
+  {
+    "assetName": "H1_M1_L1_OR_Tags",
+    "tags": "tag1:H1_M1_L1_OR_Tags",
+    "templateType": "TF",
+    "templateVersion": "0.11",
+    "failureCriteriaHigh": "1",
+    "failureCriteriaMedium": "1",
+    "failureCriteriaLow": "1",
+    "failureCriteriaOperator": "OR"
+  },
+    {
+    "assetName": "H1_M1_L1_OR_Tags_Vers",
+    "tags": "tag1:H1_M1_L1_OR_Tags",
+    "templateType": "TF",
+    "templateVersion": "0.11",
+    "failureCriteriaHigh": "1",
+    "failureCriteriaMedium": "1",
+    "failureCriteriaLow": "1",
+    "failureCriteriaOperator": "OR"
+  }
+]

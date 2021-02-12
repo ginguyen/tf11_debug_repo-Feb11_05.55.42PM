@@ -1,0 +1,40 @@
+{
+    "meta": {
+        "matchedPoliciesSummary": {
+            "high": 0,
+            "medium": 2,
+            "low": 0
+        },
+        "errorDetails": []
+    },
+    "data": [
+        {
+            "id": "98723199-7cc5-4dee-b667-4eec7fb55460",
+            "attributes": {
+                "severity": "medium",
+                "name": "AWS VPC NACL allows traffic from blocked ports",
+                "rule": "$.resource.aws_network_acl exists and $.resource.aws_network_acl[*].ingress[?(@.protocol == 'tcp' && @.from_port == '22' && @.to_port == '22')].action==allow or $.resource.aws_network_acl[*].ingress[?(@.protocol == 'tcp' && @.from_port == '21' && @.to_port == '21')].action==allow or $.resource.aws_network_acl[*].ingress[?(@.protocol == 'tcp' && @.from_port == '5800' && @.to_port == '5800')].action==allow or $.resource.aws_network_acl[*].ingress[?(@.protocol == 'tcp' && @.from_port == '5900' && @.to_port == '5903')].action==allow or  $.resource.aws_network_acl[*].ingress[?(@.protocol == 'tcp' && @.from_port == '2323' && @.to_port == '2323')].action==allow or $.resource.aws_network_acl[*].ingress[?(@.protocol == 'tcp' && @.from_port == '23' && @.to_port == '23')].action==allow or $.resource.aws_network_acl[*].ingress[?(@.protocol == 'tcp' && @.from_port == '25' && @.to_port == '25')].action==allow or $.resource.aws_network_acl[*].ingress[?(@.protocol == 'tcp' && @.from_port == '110' && @.to_port == '110')].action==allow or $.resource.aws_network_acl[*].ingress[?(@.protocol == 'tcp' && @.from_port == '143' && @.to_port == '143')].action==allow or $.resource.aws_network_acl[*].ingress[?(@.protocol == '-1' && @.from_port == '53' && @.to_port == '53')].action==allow or $.resource.aws_network_acl[*].ingress[?(@.protocol == 'udp' && @.from_port == '135' && @.to_port == '135')].action==allow or $.resource.aws_network_acl[*].ingress[?(@.protocol == '-1' && @.from_port == '137' && @.to_port == '139')].action==allow or $.resource.aws_network_acl[*].ingress[?(@.protocol == 'udp' && @.from_port == '69' && @.to_port == '69')].action==allow",
+                "desc": "Ensure AWS VPC NACL blocks traffic from blocked ports.",
+                "files": [
+                    "./aws_two_tier_variable_files_and_values/aws_two_tier.tf"
+                ],
+                "policyId": "98723199-7cc5-4dee-b667-4eec7fb55460",
+                "docUrl": "http://prisma.fyi/p42"
+            }
+        },
+        {
+            "id": "f3542ecc-6d34-4797-9b0f-d773d46b50a7",
+            "attributes": {
+                "severity": "medium",
+                "name": "AWS VPC NACL allows egress traffic from blocked ports",
+                "rule": "$.resource.aws_network_acl exists and $.resource.aws_network_acl[*].egress[?(@.protocol == 'tcp' && @.from_port == '22' && @.to_port == '22')].action==allow or $.resource.aws_network_acl[*].egress[?(@.protocol == 'tcp' && @.from_port == '21' && @.to_port == '21')].action==allow or $.resource.aws_network_acl[*].egress[?(@.protocol == 'udp' && @.from_port == '135' && @.to_port == '135')].action==allow or $.resource.aws_network_acl[*].egress[?(@.protocol == 'tcp' && @.from_port == '445' && @.to_port == '445')].action==allow or $.resource.aws_network_acl[*].egress[?(@.protocol == '-1' && @.from_port == '137' && @.to_port == '139')].action==allow or $.resource.aws_network_acl[*].egress[?(@.protocol == 'udp' && @.from_port == '69' && @.to_port == '69')].action==allow",
+                "desc": "Ensure AWS VPC NACL blocks egress traffic from blocked ports.",
+                "files": [
+                    "./aws_two_tier_variable_files_and_values/aws_two_tier.tf"
+                ],
+                "policyId": "f3542ecc-6d34-4797-9b0f-d773d46b50a7",
+                "docUrl": "http://prisma.fyi/p75"
+            }
+        }
+    ]
+}

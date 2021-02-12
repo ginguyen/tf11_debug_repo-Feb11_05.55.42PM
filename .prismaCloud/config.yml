@@ -1,0 +1,11 @@
+template_type: TF
+terraform_version: 0.11
+template_parameters:
+  variable_files:
+  - './aws_two_tier_variable_files_and_values/terraform.tfvars'
+  variables:
+    ingress_port: 22
+    egress_port: 22
+tags:
+- Team:Shift_Left_tf11
+
